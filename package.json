@@ -1,0 +1,19 @@
+{
+  "name": "organic-dna-fold",
+  "version": "0.0.1",
+  "description": "DNA utility function folding DNA structure with support for array manupulations and node overriding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/outbounder/organic-dna-fold.git"
+  },
+  "author": "Boris Filipov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/outbounder/organic-dna-fold/issues"
+  },
+  "homepage": "https://github.com/outbounder/organic-dna-fold"
+}
