@@ -32,16 +32,15 @@ var walkAndFold = function(src, dest) {
         walkAndFold(src[key], dest[key])
       } else
       if(typeof src[key] == "object") {
-        if(!dest[key])
-          dest[key] = {}
-
         // check does folding needs to be override or merge
-        if(key.indexOf("~") !== 0)
+        if(key.indexOf("~") !== 0){
+          if(!dest[key])
+            dest[key] = {}
           // merge when not starting node name with ~
           walkAndFold(src[key], dest[key])
-        else
+        } else
           // override requested
-          dest[key] = src[key]
+          dest[key.replace("~","")] = src[key]
       } else
         dest[key] = src[key]
     }
