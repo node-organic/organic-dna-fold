@@ -47,6 +47,5 @@ var walkAndFold = function(src, dest) {
   }
 }
 module.exports = function(dna, branch) {
-  var branch = dna.selectBranch(branch);
   walkAndFold(branch, dna)
 }

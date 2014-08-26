@@ -14,7 +14,7 @@ DNA utility function folding DNA structure with support for array manupulations 
       "anotherOne": "value"
     })
 
-    fold(dna, "modeA") // fold modeA branch over dna root
+    fold(dna, dna.modeA) // fold modeA branch over dna root
 
     console.log(dna.property) // == "new value"
     console.log(dna.anotherOne) // == "value"
@@ -33,7 +33,7 @@ DNA utility function folding DNA structure with support for array manupulations 
       }
     })
 
-    fold(dna, "modeA")
+    fold(dna, dna.modeA)
 
     console.log(dna.anotherOne) // == undefined
     console.log(dna.property) // == "value"
@@ -51,7 +51,7 @@ DNA utility function folding DNA structure with support for array manupulations 
       "array": ["0", 1]
     })
 
-    fold(dna, "modeA")
+    fold(dna, dna.modeA)
 
     console.log(dna.array) // == ["0", 1, "atEndOfArray"]
 
@@ -68,7 +68,7 @@ DNA utility function folding DNA structure with support for array manupulations 
       "array": ["0", 1]
     })
 
-    fold(dna, "modeA")
+    fold(dna, dna.modeA)
 
     console.log(dna.array) // == ["atStartOfArray", "0", 1]
 
@@ -87,7 +87,7 @@ DNA utility function folding DNA structure with support for array manupulations 
       "array": ["0", 1]
     })
 
-    fold(dna, "modeA")
+    fold(dna, dna.modeA)
 
     console.log(dna.array) // == ["0", "atMiddleOfArray", 1]
 
@@ -108,6 +108,6 @@ DNA utility function folding DNA structure with support for array manupulations 
       "array": ["0", 1, { property: "value" }]
     })
 
-    fold(dna, "modeA")
+    fold(dna, dna.modeA)
 
     console.log(dna.array) // == ["0", 1, { property:"value", "newProperty": true }]
