@@ -25,18 +25,22 @@ DNA utility function folding DNA structure with support for array manupulations 
       "modeA": {
         "~plasma": {
           "property": "value"
-        }
+        },
+        "~array": []
       },
       "plasma": {
         "property": "",
         "anotherOne": ""
-      }
+      },
+      "array": ["a", "b", "c"]
     })
 
     fold(dna, dna.modeA)
 
     console.log(dna.anotherOne) // == undefined
     console.log(dna.property) // == "value"
+
+    console.log(dna.array) // == []
 
 ### folding and push to array merge
 

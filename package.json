@@ -1,6 +1,6 @@
 {
   "name": "organic-dna-fold",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DNA utility function folding DNA structure with support for array manupulations and node overriding",
   "main": "index.js",
   "scripts": {
