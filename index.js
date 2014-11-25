@@ -27,9 +27,16 @@ var walkAndFold = function(src, dest) {
   if(typeof src == "object") {
     for(var key in src) {
       if(Array.isArray(src[key])) {
-        if(!dest[key])
-          dest[key] = []
-        walkAndFold(src[key], dest[key])
+        // check does folding needs to be override or merge
+        if(key.indexOf("~") !== 0) {
+          if(!dest[key])
+            dest[key] = []
+          // merge when not starting node name with ~
+          walkAndFold(src[key], dest[key])
+        } else {
+          // override requested
+          dest[key.replace("~","")] = src[key]
+        }
       } else
       if(typeof src[key] == "object") {
         // check does folding needs to be override or merge
