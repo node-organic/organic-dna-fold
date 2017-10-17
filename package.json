@@ -4,7 +4,10 @@
   "description": "DNA utility function folding DNA structure with support for array manupulations and node overriding",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "release-patch": "npm run test && npm version patch && npm publish && git push --tags && git push origin master",
+    "release-minor": "npm run test && npm version minor && npm publish && git push --tags && git push origin master",
+    "release-major": "npm run test && npm version major && npm publish && git push --tags && git push origin master"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/outbounder/organic-dna-fold/issues"
   },
-  "homepage": "https://github.com/outbounder/organic-dna-fold"
+  "homepage": "https://github.com/outbounder/organic-dna-fold",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
 }

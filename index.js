@@ -28,10 +28,10 @@ var walkAndFold = function(src, dest) {
     for(var key in src) {
       if(Array.isArray(src[key])) {
         // check does folding needs to be override or merge
-        if(key.indexOf("~") !== 0) {
+        if(key.indexOf("~") !== 0 && Array.isArray(dest[key])) {
           if(!dest[key])
             dest[key] = []
-          // merge when not starting node name with ~
+          // merge when not starting node name with ~ and destination is not Array
           walkAndFold(src[key], dest[key])
         } else {
           // override requested
