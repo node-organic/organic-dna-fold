@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/outbounder/organic-dna-fold.git"
+    "url": "git://github.com/node-organic/organic-dna-fold.git"
   },
   "author": "Boris Filipov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/outbounder/organic-dna-fold/issues"
+    "url": "https://github.com/node-organic/organic-dna-fold/issues"
   },
-  "homepage": "https://github.com/outbounder/organic-dna-fold",
+  "homepage": "https://github.com/node-organic/organic-dna-fold",
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^4.0.1"
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
   }
 }
